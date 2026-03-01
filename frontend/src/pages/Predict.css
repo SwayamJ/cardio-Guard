@@ -1,0 +1,245 @@
+.predict-wrapper {
+    min-height: calc(100vh - 68px);
+    padding: 3rem 1.5rem 5rem;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.predict-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.predict-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.predict-header p {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.predict-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-section {
+    background: var(--c5);
+    border: 1px solid var(--c3);
+    border-radius: var(--radius);
+    padding: 1.8rem 1.8rem 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.form-section-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--c1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--c3);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.form-group label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-mid);
+}
+
+.unit {
+    font-weight: 400;
+    color: var(--text-light);
+}
+
+.form-group input[type="number"] {
+    padding: 0.65rem 0.9rem;
+    border: 1.5px solid var(--c3);
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    background: var(--c4);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.form-group input[type="number"]:focus {
+    border-color: var(--c1);
+    box-shadow: 0 0 0 3px rgba(107, 144, 128, 0.15);
+    background: var(--c5);
+}
+
+.toggle-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.toggle-btn {
+    padding: 0.5rem 1.1rem;
+    border: 1.5px solid var(--c3);
+    border-radius: 50px;
+    background: var(--c4);
+    color: var(--text-mid);
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.18s ease;
+}
+
+.toggle-btn:hover {
+    border-color: var(--c2);
+    background: var(--c3);
+}
+
+.toggle-btn.selected {
+    background: var(--c1);
+    border-color: var(--c1);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(107, 144, 128, 0.3);
+}
+
+.lifestyle-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.5rem;
+}
+
+.submit-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 1.05rem;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-sm);
+}
+
+.submit-btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2.5px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.error-box {
+    background: #fff5f5;
+    border: 1px solid #fcc;
+    color: #c0392b;
+    border-radius: var(--radius-sm);
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* Result */
+.result-card {
+    border-radius: var(--radius);
+    padding: 3rem 2.5rem;
+    text-align: center;
+    max-width: 520px;
+    margin: 4rem auto;
+    box-shadow: var(--shadow-lg);
+    animation: popIn 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+.result-negative {
+    background: linear-gradient(135deg, #f0faf4, var(--c4));
+    border: 1.5px solid var(--c2);
+}
+
+.result-positive {
+    background: linear-gradient(135deg, #fff5f5, #ffe8e8);
+    border: 1.5px solid #f5c2c2;
+}
+
+.result-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.result-card h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+}
+
+.result-desc {
+    color: var(--text-mid);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.result-disclaimer {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.prob-bar-wrap {
+    margin: 1rem 0 1.5rem;
+}
+
+.prob-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.prob-bar {
+    height: 10px;
+    background: var(--c3);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.prob-fill {
+    height: 100%;
+    border-radius: 50px;
+    transition: width 1s ease;
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
