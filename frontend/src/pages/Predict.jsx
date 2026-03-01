@@ -56,7 +56,7 @@ export default function Predict() {
             for (const [k, v] of Object.entries(form)) {
                 payload[k] = parseFloat(v)
             }
-            const res = await fetch('/api/predict', {
+            const res = await fetch('https://cardio-guard-g4rt.onrender.com/api/predict', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
